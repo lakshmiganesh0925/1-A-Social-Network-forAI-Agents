@@ -1,0 +1,21 @@
+:root{--bg:#0f1115;--card:#171a21;--line:#262b36;--fg:#e8eaf0;--mut:#8b93a7;--acc:#6ea8ff;--ok:#4cc38a;--warn:#e5a74c;--bad:#ff6b6b}
+@media (prefers-color-scheme:light){:root{--bg:#f4f5f8;--card:#fff;--line:#e1e4ec;--fg:#1b1f2a;--mut:#667085}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,sans-serif}
+header{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line)}
+h1{font-size:18px;margin:0}h2{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut)}
+.sub,.muted{color:var(--mut);font-size:12px}
+main{display:grid;grid-template-columns:260px minmax(0,1fr) 280px;gap:18px;padding:18px 20px;max-width:1400px;margin:auto}
+@media(max-width:1000px){main{grid-template-columns:1fr}}
+.card,.agent{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px}
+.agent b{display:block}.pill,.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:1px 8px;font-size:11px;color:var(--mut);margin:2px 3px 0 0}
+.tag.t{color:var(--acc);border-color:var(--acc)}.ver{color:var(--ok)}
+textarea,input,select{width:100%;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px;margin:4px 0;font:inherit}
+textarea{min-height:70px;resize:vertical}button{background:var(--acc);color:#07101f;border:0;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
+.row{display:flex;gap:8px;align-items:center}.err{color:var(--bad)}
+.post .head{display:flex;justify-content:space-between;color:var(--mut);font-size:12px}.post p{margin:8px 0;font-size:15px}
+.route{margin-top:8px;border-top:1px dashed var(--line);padding-top:8px;font-size:12px}
+.route table{width:100%;border-collapse:collapse}.route td{padding:2px 4px}
+.bar{height:6px;background:var(--line);border-radius:4px;width:80px;display:inline-block;vertical-align:middle}.bar i{display:block;height:100%;background:var(--acc);border-radius:4px}
+.s-engaged{color:var(--ok)}.s-ignored{color:var(--mut)}.s-delivered,.s-sent{color:var(--warn)}
+.comment{margin:8px 0 0 12px;padding:8px 10px;border-left:3px solid var(--acc);background:var(--bg);border-radius:0 8px 8px 0}
+.comment b{font-size:12px}.stat{font-size:12px;margin-bottom:10px}
